@@ -1,4 +1,5 @@
-import java.util.Scanner;public class benjaminbulb {
+import java.util.Scanner;
+public class benjaminbulb{
     
     public static void main(String[] args) {
         Scanner scn = new Scanner(System.in);
