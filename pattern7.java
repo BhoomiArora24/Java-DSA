@@ -4,19 +4,32 @@ public class pattern7 {
     public static void main(String[] args) {
         Scanner scn = new Scanner(System.in);
         int n = scn.nextInt();
-        int star=1;
-        int space=0;
-        for(int i=1;i<=n;i++){
-            // System.out.println(space+", "+ star );
-            for(int j=1; j<=space; j++){
-                System.out.print("\t");
-            }
-            for(int j=1; j<=star; j++){
-                System.out.println("*\t");
-            }
-            space++;
-            System.out.println();
+        // int star=1;
+        // int space=0;
+        // for(int i=1;i<=n;i++){
+        //     // System.out.println(space+", "+ star );
+        //     for(int j=1; j<=space; j++){
+        //         System.out.print("\t");
+        //     }
+        //     for(int j=1; j<=star; j++){
+        //         System.out.println("*\t");
+        //     }
+        //     space++;
+        //     System.out.println();
+        // }
+
+        //ANOTHER METHOD
+        for(int i=1;i<=n; i++){
+            for(int j=1; j<=i; j++){
+                if(i==j){
+                    System.out.print("*\t");
+                }
+                else{
+                    System.out.print(" ");
+                }
         }
+        System.out.println("");
+    }
         scn.close();
     }
 }
