@@ -8,29 +8,28 @@ public class pattern16 {
         int space= 2*n-3;
         for(int i=1;i<=n;i++){
             int val=1;
-            for(int j=1;j<=star;j++){
+            for(int j=1; j<=star; j++){
                 System.out.print(val+"\t");
-                if(j<star){
                 val++;
-                }
-                
             }
-            for(int j=1;j<=space;j++){
+            for(int j=1; j<=space; j++){
                 System.out.print("\t");
             }
-            if (i == n) { // Special case for the last row to avoid overlap
+            if (i==n){
                 val--;
+                star--;
             }
-            for(int j=1;j<=star;j++){
-                System.out.print(val+"\t");
-                if(j<star){
+            for(int j=1; j<=star; j++){
                 val--;
-                }
+                System.out.print(val+"\t");
+                
             }
             System.out.println();
             star++;
             space-=2;
+            }
+            
+            scn.close();
         }
-        scn.close();
-}
-}
+    }
+
