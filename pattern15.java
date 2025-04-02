@@ -33,5 +33,6 @@ public class pattern15 {
             }
             
         }
+        scn.close();
     }
 }
