@@ -28,12 +28,14 @@ public class baseToBase {
     }
 
     public static int decimaltoBase(int newBase, int b, int nb){
-        int pow=0;
+        int rv=0;
+        int p=1;
         while(newBase>0){
-            int dig= newBase%nb;
+            int digit= newBase%nb;
+            rv += digit*p;
             newBase=newBase/nb;
-            pow++;
+            p=p*10;
         }
-        return dig;
+        return rv;
     }
 }
