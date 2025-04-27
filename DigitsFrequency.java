@@ -1,5 +1,5 @@
 import java.util.Scanner;
-public class DigitsFrequency {
+public class DigitsFrequency{
     
     public static void main(String[] args) {
         Scanner scn= new Scanner(System.in);

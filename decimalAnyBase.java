@@ -5,19 +5,17 @@ public class decimalAnyBase {
         Scanner scn= new Scanner(System.in);
         int n= scn.nextInt();
         int b=scn.nextInt();
-        int nb=  scn.nextInt();
-        int newBase=decimalBase(n, b, nb);
+        int newBase=decimalBase(n, b);
         System.out.println(newBase);
     }
-    public static int decimalBase(int n, int b, int nb){
-        int pow=0;
+    public static int decimalBase(int n, int b){
+        int pow=1;
         int result=0;
         while(n>0){
-            int dig= n%nb;
-            int value = dig * (int)Math.pow(b, pow);
-            result +=value;
-            n=n/nb;
-            pow++;
+            int dig= n%b;
+            n=n/b;
+            result+=dig*pow;
+            pow= pow*10;
         }
         return result;
     }
