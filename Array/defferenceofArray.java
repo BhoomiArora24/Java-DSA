@@ -31,47 +31,22 @@ public class defferenceofArray{
     }
 
     public static int[] deffofArray(int[] arr1, int[] arr2){
-        int[] defference = new int[arr2.length];
-        int carry = 0;
-        
-        
-        int i = arr1.length-1;
-        int j = arr2.length-1;
-        int k = defference.length-1;
+       int[] deff= new int[arr2.length];
 
-        int a1v = i >= 0? arr1[i]: 0;
+       int borrow;
 
-        while(k >= 0){
-            if(arr2[j] + carry >= a1v){
-                defference[k] = arr2[j] + carry - a1v;
-                carry = 0;
-            }
-            else{
-                defference[k] = arr2[j] + carry - a1v;
-                carry= -1;
-            }
-            i--;
-            j--;
-            k--;
+       int i = arr1.length - 1;
+       int j = aar2.length - 1;
+       int k = deff.length - 1;
 
-            int idx = 0;
-            while(idx<defference.length){
-                if(defference[idx]==0){
-                    
-                    idx++;
-                }
-                else{
-                    break;
-                }
-            }
-
-            if(idx < defference.length){
-                System.out.println("Defference array is: " + Arrays.toString(defference));
-                idx++;
-            }
-
-          return defference;
+       while(k>=0){
+        if(j>i){
+            deff[k] = arr2[j] + borrow - arr1[i];
+            borrow = 0;
         }
-        return defference;
+        else if(i>j){
+            deff
+        }
+       }
     }
 }

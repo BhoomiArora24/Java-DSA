@@ -14,23 +14,22 @@ public class anyBaseAddition {
     }
 
     public static int getSum(int n1, int n2, int b){
-        int result=0;
-        int c=0;
-        int p=1;
-        while( n1>0 || n2>0 || c>0){
-            int d1= n1%10;
-            int d2= n2%10;
-            n1=n1/10;
-            n2=n2/10;
+        int d1 = n1%10;
+        n1 /= 10;
 
-            
-            int dig= d1+d2+c;
-            c=dig/b;
-            dig=dig%b;
+        int d2 = n2%10;
+        n2 /= 10;
 
-            result +=  dig* p;
-            p*=10;
+        int carry=0;
+        int sum = 0;
+
+        while(d1>0 || d2>0 || c>0){
+            int dig = d1 + d2 + carry;
+            dig %= b;
+            carry = dig/b;
+
+            sum = dig * pow;
         }
-        return result;
+
     }
 }
