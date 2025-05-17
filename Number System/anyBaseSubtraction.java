@@ -33,11 +33,11 @@ public static int getSub(int n1, int n2, int b){
             dig= d2-d1;
         }
         else if(d2<d1){
-            dig= d2+ borrow -d1;
-            n2--;
+            dig= (d2+ borrow) -d1;
+            n2 -=1;
         }
 
-        sub = dig* pow;
+        sub += dig* pow;
         pow *= 10;
     }
     return sub;

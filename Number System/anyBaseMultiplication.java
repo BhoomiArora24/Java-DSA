@@ -11,18 +11,53 @@ public class anyBaseMultiplication {
         int b = scn.nextInt();
 
         int mul= getMul(n1, n2, b);
-        System.out.println("Multiplication of "+n1+" and "+n2+" in base "+ b+ "is:" + mul);
+        System.out.println("Multiplication: " + mul);
     }
 
 
-    public static int getProductWithSingleDigit(int b, int n1, int d2){
+    public static int getMul(int n1, int n2, int b){
         int rv=0;
-        while(n1>0){
-            int d1= n1%10;
-            n1=n1/10;
+        int carry= 0;
+        int pow = 1;
+        while(n2>0){
+            if(n1>0){
+                
 
-            int d
+            int d2 = n2%10;
+            n2 = n2/10;
+
+
+            while(n1>0){
+                int d1 = n1%10;
+            n1=n1/10;
+            
+            int dig = (d1  * d2) + carry;
+
+            System.out.println("dig1: "+dig);
+            carry = dig/b;
+
+            System.out.println("Carray : "+ carry);
+            dig = dig%b;
+
+            System.out.println("dig2: " +dig);
+            
+            rv += dig* pow;
+            pow *= 10;
+
+            }
+            
+            if(carry>0){
+                rv += carry*pow;
+            }
+            }
+            
+
+            
+
+
         }
+
+        return rv;
     }
 
     
