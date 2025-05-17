@@ -1,5 +1,5 @@
 import java.util.Scanner;
-public class anyBaseSubtraction {
+public class anyBaseSubtraction{
     public static void main(String[] args) {
     Scanner scn= new Scanner(System.in);
         System.out.println("Enter the first no:");
@@ -15,32 +15,31 @@ public class anyBaseSubtraction {
 
 
 public static int getSub(int n1, int n2, int b){
-    int result= 0;
-    int borrow=0;
-    int p=1;
+    
+    int borrow = b;
+    int sub = 0;
+    int pow = 1;
+    int dig=0;
 
-    while(n2>0){
-        int d2=n2%10;
-        int d1=n1%10;
-
-        n2=n2/10;
+    while(n1>0 || n2>0){
+        int d1 = n1%10;
         n1=n1/10;
 
-        int dig;
-        d2=d2+borrow;
+        int d2 = n2%10;
+        n2 = n2/10;
+        
 
-        if(d2>=d1){
+        if(d2>d1){
             dig= d2-d1;
-            borrow=0;
         }
-        else{
-            borrow=-1;
-            dig= d2+ b-d1;
+        else if(d2<d1){
+            dig= d2+ borrow -d1;
+            n2--;
         }
 
-        result +=dig*p;
-        p*=10;
+        sub = dig* pow;
+        pow *= 10;
     }
-    return result;
+    return sub;
 }
 }
