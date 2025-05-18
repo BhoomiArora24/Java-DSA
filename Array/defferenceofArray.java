@@ -33,20 +33,53 @@ public class defferenceofArray{
     public static int[] deffofArray(int[] arr1, int[] arr2){
        int[] deff= new int[arr2.length];
 
-       int borrow;
+       int borrow =10;
 
        int i = arr1.length - 1;
-       int j = aar2.length - 1;
+       int j = arr2.length - 1;
        int k = deff.length - 1;
 
-       while(k>=0){
-        if(j>i){
-            deff[k] = arr2[j] + borrow - arr1[i];
+       while(k >= 0){
+        int d1 = i >= 0 ? arr1[i] : 0;
+        int d2 = j >= 0 ? arr2[j] : 0;
+
+        if(d2 > d1 || d2 == d1){
             borrow = 0;
+            deff[k] = (d2 + borrow) - d1;
+            System.out.println("deff[k]: "+ deff[k]);
+
         }
-        else if(i>j){
-            deff
+        else{
+            borrow = 10;
+            deff[k] = (d2 + borrow) - d1;
+            System.out.println("deff[k]: "+ deff[k]);
+            
+            
         }
+
+        
+        i--;
+        j--;
+        k--;
+
+        if(borrow == 10 && j >= 0){
+            arr2[j]--;
+        }
+        
+
+        
+
+
+        
        }
+       
+       int[] newDeff = new int[deff.length-1];
+        if(arr2[0] == 0){
+            for(int m=1; m<deff.length; m++){
+                newDeff[m-1] = deff[m];
+            }
+        }
+       return newDeff;
+      
     }
 }
