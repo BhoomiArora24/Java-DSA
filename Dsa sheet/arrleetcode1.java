@@ -1,7 +1,7 @@
 import java.util.Scanner;
 import java.util.Arrays;
 
-public class leetcode1{
+public class arrleetcode1{
     public static void main(String[] args){
         Scanner scn=new Scanner(System.in);
         int n = scn.nextInt();

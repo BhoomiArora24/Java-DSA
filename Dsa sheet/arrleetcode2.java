@@ -1,6 +1,6 @@
 import java.util.Scanner;
 import java.util.Arrays;
-public class leetcode2{
+public class arrleetcode2{
     public static void main(String[] args){
         Scanner scn= new Scanner(System.in);
         System.out.println("Size of array1: ");
@@ -21,12 +21,12 @@ public class leetcode2{
             nums2[i] = scn.nextInt();
         }
 
-        double median = medianOfArray(s1, s2, nums1, nums2);
+        double median = medianOfArray(nums1, nums2);
         System.out.println("Medain: " + median);
         
     }
 
-    public static double medianOfArray(int s1, int s2, int[] nums1, int[] nums2){
+    public static double medianOfArray( int[] nums1, int[] nums2){
         int[] newArr =  new int[nums1.length + nums2.length];
         for( int i = 0; i < nums1.length; i++){
             newArr[i] = nums1[i];
@@ -44,7 +44,7 @@ public class leetcode2{
         if(newArr.length % 2 == 0){
             int med1 = newArr[(newArr.length/2) - 1];
             int med2 = newArr[newArr.length/2];
-            mainMed = med1 + med2 /2;
+            mainMed = (med1 + med2) /2.0;
         }
         else{
             mainMed = newArr[newArr.length/2];
