@@ -1,5 +1,5 @@
-public class arrGFG3 {
-    class Solution {
+public class arrGFG3{
+    
     public Pair<Integer, Integer> getMinMax(int[] arr) {
         // Code Here
         int max = arr[0];
@@ -26,4 +26,4 @@ public class arrGFG3 {
     }
 }
 
-}
+
