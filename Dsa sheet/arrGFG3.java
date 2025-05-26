@@ -16,7 +16,7 @@ public class arrGFG3{
             }
         }
         
-        if(arr.length == 1){
+        if(arre.length == 1){
             max = arr[0];
             min = arr[0];
         }
