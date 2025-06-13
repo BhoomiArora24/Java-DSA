@@ -31,7 +31,8 @@ public class subarraySumK {
         for(int i = 0; i< arr.length; i++){
             sum += arr[i];
             if(map.containsKey(sum - k)){
-                count += map.get(sum - k);
+                count += map.get(sum - k);//if sum-k exists, it means a subarray with sum k has been found.
+
             }
             if(map.containsKey(sum)){
                 map.put(sum, map.get(sum)+1);
@@ -40,7 +41,7 @@ public class subarraySumK {
                 map.put(sum, 1);
 
             }
-        }
+        }                                                                                            
         return count;
     }
 }
