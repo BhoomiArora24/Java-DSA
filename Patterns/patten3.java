@@ -1,5 +1,5 @@
 import java.util.Scanner;
-public class patten3 {
+public class patten3{
     
     public static void main(String[] args) {
         Scanner scn = new Scanner(System.in);
