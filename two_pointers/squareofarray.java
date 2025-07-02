@@ -20,7 +20,7 @@ public class squareofarray {
             int leftSquare = arr[left] * arr[left];
             int rightSquare = arr[right] * arr[right];
 
-            if(leftSquare > rightSquare){
+            if(leftSquare > rightSquare){ 
                 result[index] = leftSquare;
                 left++;
             } else {
